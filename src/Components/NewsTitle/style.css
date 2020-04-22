@@ -1,0 +1,11 @@
+.news-header-popular {
+    color: rgb(40,60,74);
+    font-size: 36px;
+    padding: 8px 0;
+}
+
+.news-header {
+    color: rgb(40,60,74);
+    font-size: 24px;
+    padding: 0 8px 16px;
+}

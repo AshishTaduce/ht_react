@@ -1,0 +1,30 @@
+.section-1{
+    display: flex;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.popular-column{
+    margin: 16px 8px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    /*border-right: 2px solid #f0f0f0;*/
+}
+
+.big-image{
+    width: 100%;
+}
+
+.big-image-div{
+}
+
+.unpopular-column{
+    height: 100%;
+    padding: 0px 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}

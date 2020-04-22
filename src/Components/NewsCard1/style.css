@@ -1,0 +1,22 @@
+.news-card-1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    border: 2px solid #f0f0f0;
+    border-top: 0;
+    border-right: 0;
+    margin: 0;
+    padding: 8px;
+}
+
+.news-1{
+    display: flex;
+}
+
+.news-image-1 {
+    padding-top: 16px;
+    padding-left: 8px;
+    float: right;
+    width: 37%;
+}
