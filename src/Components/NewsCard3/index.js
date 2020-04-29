@@ -5,14 +5,14 @@ import './style.css'
 import Footer from "../Footer";
 
 function NewsCard3(props) {
-    return <div className={"news-card-3"}>
+    return<div className={"news-card-3"}>
         {props.htCurrentImage === undefined
             ? null
-            :<div className={'news-3-image-div'}>
-                <img src={props.htCurrentImage} alt=""  className= "news-image-3"/>
-            </div>
+            // :<div className={'news-3-image-div'}>
+                :<img src={props.htCurrentImage} alt=""  className= "news-image-3"/>
+            // </div>
         }
-        s
+
         <div className={'sec-3-news'}>
             <NewsTitle title={props.title} isPopular={false}/>
             <div className={'news-3'}>
@@ -22,6 +22,5 @@ function NewsCard3(props) {
         </div>
     </div>;
 }
-
 
 export default NewsCard3;

@@ -1,5 +1,6 @@
 .footer{
     color: gray;
+    padding: 0 8px 8px;
 }
 
 .comments-points{
@@ -13,8 +14,8 @@
     font-weight: bold;
     justify-content: start;
     align-items: center;
-    flex: 5;
-    padding-bottom: 8px;
+    flex: 4;
+    /*padding-bottom: 8px;*/
 }
 
 .points{
@@ -26,16 +27,20 @@
 }
 
 .time-published{
-    padding-left: 8px;
+    /*padding-left: 8px;*/
 }
 
 .author {
-    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    /*padding: 8px;*/
 }
 
 .icons {
     filter: invert(84%) sepia(10%) saturate(158%) hue-rotate(4deg) brightness(85%) contrast(89%);
     width: 16px;
     height: 16px;
-    padding: 8px 8px 4px 0;
+    /*padding: 8px 8px 4px 0;*/
 }

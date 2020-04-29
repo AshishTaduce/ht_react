@@ -1,13 +1,17 @@
 import  './style.css'
 import React from "react";
 import ReactLogo from './comment-24px.svg'
-function Footer(props){
+export default function Footer(props){
     return(
         <div className={'footer'}>
-            <SubmitBy author = {getSource(props.props.url)}/>
+            <div className={'author'}>
+                <div>{getSource(props.props.url)}</div>
+                <div className="point-count">
+                    {props.props.score} points
+                </div>
+            </div>
             <Comments
                 comments = {props.props.descendants}
-                points = {props.props.score}
                 time = {props.props.htBatchTime}
             />
         </div>
@@ -15,16 +19,15 @@ function Footer(props){
 }
 
 function getSource(url){
+    if(url === undefined) return '';
     url = url.replace('https://','').replace('http://','');
     url = url.split('/');
     return url[0];
 }
 
-function  SubmitBy(props) {
-    return <div className={'author'}>
-        Source: {props.author}
-    </div>
-}
+// function  SubmitBy(props) {
+//     return
+// }
 
 function Comments(props) {
     return <div className="comments-points">
@@ -33,9 +36,7 @@ function Comments(props) {
             {props.comments} Comments
         </div>
         <div className="points">
-            <div className="point-count">
-                {props.points} points
-            </div>
+
             <div className="time-published">
                 {processDate(props.time)} ago
             </div>
@@ -59,5 +60,3 @@ function processDate(targetTime){
         return minutes + ' minutes';
     }
 }
-
-export default Footer;

@@ -5,9 +5,11 @@ import './style.css';
 function DaysList(props) {
     return (
         <div className="days-menu">
-            {props.strings.map((element) => {
-                return (<div className="day-name">{element[0].toUpperCase()}</div>)
-            })}
+            {props.strings.map((element, index) => {
+                return (<div className="day-name" onClick={
+                    props.callbackFn(index + 1)}>{element.toUpperCase()}</div>)
+                })
+            }
         </div>
     );
 }

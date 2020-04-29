@@ -2,38 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbed75cf-44dd-4aef-9f90-4db644e01cc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/rcc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Footer/comment-24px.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Footer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Footer/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsCard1/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsCard1/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsCard2/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsCard2/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsCard3/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsCard3/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/NewsSubtitle1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/_NewsSubtitle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/NewsSubtitle2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/_NewsSubtitle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/NewsSubtitle3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/_NewsSubtitle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsTitle/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/NewsTitle/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DaysList/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DaysList/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Section1/Section-1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Section1/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Section2/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Section2/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Section3/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Section3/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/comment-24px.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard1/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard1/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard2/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard2/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard3/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard3/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard3/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/NewsSubtitle1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/NewsSubtitle1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/_NewsSubtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/_NewsSubtitle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/NewsSubtitle2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/NewsSubtitle2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/_NewsSubtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/_NewsSubtitle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/NewsSubtitle3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/NewsSubtitle3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/_NewsSubtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/_NewsSubtitle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsTitle/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsTitle/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DaysList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaysList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DaysList/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaysList/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section1/Section-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section1/Section-1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section1/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section2/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section2/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section3/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section3/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section3/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +61,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/Footer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -147,37 +146,121 @@
       <workItem from="1587549619112" duration="1794000" />
       <workItem from="1587551443107" duration="1791000" />
       <workItem from="1587553259372" duration="1791000" />
-      <workItem from="1587555080634" duration="721000" />
+      <workItem from="1587555080634" duration="1996000" />
+      <workItem from="1587631821161" duration="446000" />
+      <workItem from="1587632289962" duration="1791000" />
+      <workItem from="1587634108010" duration="1787000" />
+      <workItem from="1587635970797" duration="1078000" />
+      <workItem from="1587638223399" duration="1790000" />
+      <workItem from="1587640303051" duration="1637000" />
+      <workItem from="1587642112595" duration="1740000" />
+      <workItem from="1587673722347" duration="238000" />
+      <workItem from="1587716603693" duration="962000" />
+      <workItem from="1587719472499" duration="1787000" />
+      <workItem from="1587721285141" duration="1822000" />
+      <workItem from="1587723349302" duration="1600000" />
+      <workItem from="1587725188335" duration="1797000" />
+      <workItem from="1587727018441" duration="1050000" />
+      <workItem from="1587729308292" duration="544000" />
+      <workItem from="1587787627916" duration="238000" />
+      <workItem from="1587977191319" duration="600000" />
+      <workItem from="1587979135877" duration="1923000" />
+      <workItem from="1587981093383" duration="2332000" />
+      <workItem from="1587983455796" duration="1802000" />
+      <workItem from="1587985291182" duration="1790000" />
+      <workItem from="1587987116327" duration="1803000" />
+      <workItem from="1587989226575" duration="591000" />
+      <workItem from="1588007880879" duration="15000" />
+      <workItem from="1588064494933" duration="1800000" />
+      <workItem from="1588066325031" duration="1741000" />
+      <workItem from="1588068167229" duration="1805000" />
+      <workItem from="1588069995075" duration="1792000" />
+      <workItem from="1588071819098" duration="1823000" />
+      <workItem from="1588073673181" duration="1786000" />
+      <workItem from="1588075480598" duration="924000" />
+      <workItem from="1588079210603" duration="15000" />
+      <workItem from="1588148379617" duration="1656000" />
+      <workItem from="1588150072858" duration="1795000" />
+      <workItem from="1588151897688" duration="1278000" />
     </task>
+    <task id="LOCAL-00001" summary="Implemented dynamic tabs'">
+      <created>1587555857824</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587555857824</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented dynamic tabs'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented dynamic tabs'" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="886" height="-12" key="GridCell.Tab.0.bottom" timestamp="1587471222494">
+    <state x="275" y="23" key="#ESLint" timestamp="1588149913051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="886" height="-12" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587471222494" />
-    <state width="778" height="26" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587384774264" />
-    <state width="886" height="-12" key="GridCell.Tab.0.center" timestamp="1587471222494">
+    <state x="275" y="23" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1588149913051" />
+    <state x="45" y="0" key="CommitChangelistDialog2" timestamp="1587555855341">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="886" height="-12" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587471222494" />
-    <state width="778" height="26" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587384774264" />
-    <state width="886" height="-12" key="GridCell.Tab.0.left" timestamp="1587471222494">
+    <state x="45" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587555855341" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1588151459211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="886" height="-12" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587471222494" />
-    <state width="778" height="26" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587384774263" />
-    <state width="886" height="-12" key="GridCell.Tab.0.right" timestamp="1587471222494">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1588151459211" />
+    <state width="1345" height="58" key="GridCell.Tab.0.bottom" timestamp="1588153151970">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="886" height="-12" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587471222494" />
-    <state width="778" height="26" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587384774264" />
-    <state x="95" y="164" width="672" height="677" key="run.anything.popup" timestamp="1587380783413">
+    <state width="1345" height="58" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588153151970" />
+    <state width="1579" height="129" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587729853523" />
+    <state width="1345" height="58" key="GridCell.Tab.0.center" timestamp="1588153151970">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="95" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587380783413" />
+    <state width="1345" height="58" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588153151970" />
+    <state width="1579" height="129" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587729853523" />
+    <state width="1345" height="58" key="GridCell.Tab.0.left" timestamp="1588153151969">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="58" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588153151969" />
+    <state width="1579" height="129" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587729853523" />
+    <state width="1345" height="58" key="GridCell.Tab.0.right" timestamp="1588153151970">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="58" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588153151970" />
+    <state width="1579" height="129" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587729853523" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1588151237944">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588151237944" />
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588151459211">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1588151459211" />
+    <state x="445" y="191" key="git4idea.ui.GitUnstashDialog" timestamp="1588151185932">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="191" key="git4idea.ui.GitUnstashDialog/0.0.1366.728@0.0.1366.728" timestamp="1588151185932" />
+    <state x="95" y="164" width="672" height="677" key="run.anything.popup" timestamp="1588065379395">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="95" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588065379395" />
   </component>
 </project>

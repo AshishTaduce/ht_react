@@ -1,9 +1,8 @@
 .section-2{
+    margin: 12px 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
 }

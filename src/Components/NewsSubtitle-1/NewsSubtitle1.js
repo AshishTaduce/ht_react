@@ -1,5 +1,6 @@
 import React from "react";
 import './_NewsSubtitle.css'
+import Truncate from 'react-truncate';
 
 function NewsSubtitle1(props) {
     return <div className={props.data === undefined ? '' :"news-subtitle"}>
@@ -7,7 +8,9 @@ function NewsSubtitle1(props) {
             ? null
             :<img src={props.imageUrl} alt=""  className= "news-image-1"/>
         }
-        {props.data === undefined ? null :props.data}
+        <Truncate lines={5} ellipsis='...' >
+            {props.data === undefined ? null :props.data}
+        </Truncate>
     </div>;
 }
 
