@@ -9,11 +9,11 @@ function Section1(props) {
     return <div className="section-1">
         <div className="popular-column">
             <div className="big-image-div">
-                <img
+                {props.popularNews.htCurrentImage === undefined ? null : <img
                     src={props.popularNews.htCurrentImage}
                     alt=""
                     className="big-image"
-                />
+                />}
             </div>
             <div className="news-popular">
                 <NewsTitle

@@ -4,21 +4,27 @@ import DaysList from "./DaysList";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
-import * as PropTypes from "prop-types";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import SamplePage from "./designSections";
 
-// function imageExists(url, callback) {
-//     let img = new Image();
-//     img.onload = function() { return(true); };
-//     img.onerror = function() { return(false); };
-//     img.src = url;
-// }
+export default class App extends React.Component{
+    render() {
+        return (
+            <BrowserRouter>
+                <Switch>
+                    <Route path={'/'} component ={MainPage} exact={true}/>
+                    <Route path={'/samples'} component ={SamplePage} exact={true}/>
+                    <Route path={'/:dayNumber'} component ={MainPage} exact={true}/>
+                </Switch>
+            </BrowserRouter>
+        );
+    }
+}
 
 function NewsPage(props) {
     console.log('Inside news card with props:', props);
     return <>
-        {props.news === undefined
-            ? <div>Loading news...</div>
-            : <div>
+        {<div>
                 <Section1
                     popularNews={(props.news.splice(
                             props.news.findIndex((element) => element.htCurrentImage !== undefined && isItPopular(element)),
@@ -35,35 +41,28 @@ function NewsPage(props) {
     </>;
 }
 
-NewsPage.propTypes = {
-    news: PropTypes.func,
-    predicate: PropTypes.func
-};
-
-export default function App() {
+function MainPage(props) {
     let daysName = tabNameGenerator();
     daysName.unshift('Latest', 'Yesterday');
 
-    let [news, setNews] = useState();
-    let [day, setDay] = useState();
-    useEffect(getNews, [1]);
-
-    function updateDay(num){
-        console.log('update day');
-        setDay(num);
+    let [news, setNews] = useState(undefined);
+    // let [isLoading, setLoading] = useState();
+    useEffect(() => {
         getNews();
-    }
+    },[props.location.state.dayNumber]);
 
     async function getNews() {
         setNews(undefined);
-
-        console.log(day, 'Day number');
-        let response =  await fetch(`https://hacker-times.s3-us-west-1.amazonaws.com/${day === undefined ? 1 : day}dayStories`);
+        let newsUrl = `https://hacker-times.s3-us-west-1.amazonaws.com/${props.location.state === undefined ? 1 : props.location.state.dayNumber}dayStories`;
+        let response =  await fetch(newsUrl);
         // let response = await fetch('https://hacker-times.s3-us-west-1.amazonaws.com/3dayStories');
         let newsList = await response.json();
         let data =  newsList.top;
         // data = data.filter((e) => isItPopular(e));
         setNews(data);
+        // console.log('Comppleted nesws with ', news);
+        setTimeout(()=>{
+        }, 2500);
     }
 
     return (
@@ -80,8 +79,9 @@ export default function App() {
             </head>
             <div className={'main-body'}>
                 <h1 className="main-title">McLaren Times</h1>
-                <DaysList strings={daysName} callbackFn={setDay.bind(this)}/>
-                <NewsPage news={news}/>
+                <DaysList strings={daysName}/>
+
+                {news !== undefined ? <NewsPage news={news}/> : <div className={'loading-batch'}>Loading</div>}
             </div>
         </div>
     );
@@ -96,7 +96,6 @@ function tabNameGenerator() {
             `${days[new Date(temp.setDate(temp.getDate() - i)).getDay()]}`
         );
     }
-    console.log('Days list:', result);
     return result;
 }
 

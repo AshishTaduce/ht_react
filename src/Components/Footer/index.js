@@ -49,7 +49,6 @@ function processDate(targetTime){
     let days = new Date().getDate() - target.getDate();
     let hours = new Date().getHours() - target.getHours();
     let minutes = new Date().getMinutes() - target.getMinutes();
-    console.log(days, hours, minutes);
     if(days > 0){
         return days + ' days';
     }

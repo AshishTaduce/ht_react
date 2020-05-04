@@ -34,3 +34,21 @@
   color: rgb(40,60,74);
   font-family: 'Roboto Slab', serif;
 }
+
+.story-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  flex: 1;
+  height: 100vh;
+}
+
+.samples-list{
+  display: flex;
+  flex-direction: row;
+}
+
+.eee{
+
+}
