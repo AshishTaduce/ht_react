@@ -17,7 +17,7 @@ export function createPage(newsList){
 
     let result = [];
     while (newsList.length > 20){
-        if(newsList.findIndex(popularStory)){
+        if(newsList.find(popularStory)){
             let popularNews = newsList.splice(newsList.findIndex(popularStory), 1)[0];
             let [col1] = generateStoryBlock(newsList);
             let [col2, newsUsed2] = generateStoryBlock(newsList);

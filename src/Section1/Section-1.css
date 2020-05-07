@@ -1,9 +1,13 @@
 .section-1{
     display: flex;
     margin: 8px 0;
-    border-bottom: 1px solid #e5e5e5;
+    /*border-bottom: 1px solid #e5e5e5;*/
     border-top: 1px solid #e5e5e5;
     padding: 16px 0;
+}
+
+.section-1:first-child{
+    border-top: 1px solid #e5e5e5;
 }
 
 .popular-image {
@@ -32,7 +36,6 @@
 .big-image{
     width: 100%;
     max-height: 150px;
-    /*padding-bottom: 16px;*/
     /*display: flex;*/
     justify-content: center;
     object-fit: contain;
@@ -54,7 +57,7 @@
     align-items: center;
     margin: 0 8px;
     background-color: #e5e5e5;
-    max-height: 200px;
+    /*max-height: 250px;*/
 }
 
 .popular-column .big-image-div .popular-image-div{
