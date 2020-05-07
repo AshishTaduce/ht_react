@@ -1,12 +1,19 @@
 .footer{
     color: gray;
     padding: 0 8px 8px;
+
 }
 
 .comments-points{
     display: flex;
     flex-direction: row;
-    font-size: 14px;
+    font-size: 11px;
+    padding-bottom: 16px;
+    border-bottom: #e5e5e5 1px solid;
+}
+
+.comments-points:last-child{
+    border-bottom: 0;
 }
 
 .comments{
@@ -28,9 +35,13 @@
 
 .time-published{
     /*padding-left: 8px;*/
+    font-size: 11px;
+
 }
 
 .author {
+    font-size: 11px;
+
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;

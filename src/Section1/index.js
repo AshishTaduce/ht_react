@@ -2,7 +2,7 @@ import React from "react";
 import NewsTitle from "../Components/NewsTitle";
 import NewsSubtitle1 from "../Components/NewsSubtitle-1/NewsSubtitle1";
 import './Section-1.css'
-import NewsCard1, {isItPopular} from "../Components/NewsCard1";
+import NewsCard1, {isItPopular, processSubtitle} from "../Components/NewsCard1";
 import Footer from "../Components/Footer";
 
 function Section1(props) {
@@ -12,7 +12,7 @@ function Section1(props) {
                 {props.popularNews.htCurrentImage === undefined ? null : <img
                     src={props.popularNews.htCurrentImage}
                     alt=""
-                    className="big-image"
+                    className="popular-image"
                 />}
             </div>
             <div className="news-popular">
@@ -20,15 +20,15 @@ function Section1(props) {
                     title={props.popularNews.title}
                     isPopular={true}
                 />
-                <NewsSubtitle1 data={props.popularNews.htCurrentSubtitle}/>
+                <NewsSubtitle1 data={processSubtitle(props.popularNews.htCurrentSubtitle)}/>
             </div>
             <Footer props = {props.popularNews}/>
         </div>
         <div className={"unpopular-column"}>
-            {props.newsItemList.splice(0,3).map((newsItem) => <NewsCard1 news = {newsItem} isPopular = {isItPopular(newsItem)}/>)}
+            {props.column1.map((newsItem) => <NewsCard1 news = {newsItem} isPopular = {isItPopular(newsItem)}/>)}
         </div>
         <div className={"unpopular-column"}>
-            {props.newsItemList.splice(0,3).map((newsItem) => <NewsCard1 isPopular = {isItPopular(newsItem)} news = {newsItem}/>)}
+            {props.column2.map((newsItem) => <NewsCard1 isPopular = {isItPopular(newsItem)} news = {newsItem}/>)}
         </div>
     </div>;
 }

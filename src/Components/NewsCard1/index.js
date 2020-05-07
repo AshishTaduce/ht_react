@@ -7,7 +7,7 @@ import Footer from "../Footer";
 function NewsCard1(props) {
     return props.isPopular
         ? <div className="popular-newscard">
-            {props.news.htCurrentImage !== undefined ? <div className="big-image-div">
+            {props.news.htCurrentImage !== undefined ? <div className="popular-image-div">
                 <img
                     src={props.news.htCurrentImage}
                     alt=""
@@ -26,7 +26,7 @@ function NewsCard1(props) {
         : <div className={"news-card-1"}>
         <NewsTitle title={props.news.title} isPopular={false}/>
         <div className={'news-1'}>
-            <NewsSubtitle1 data={props.news.htCurrentSubtitle} imageUrl = {props.news.htCurrentImage}/>
+            <NewsSubtitle1 data={processSubtitle(props.news.htCurrentSubtitle)} imageUrl = {props.news.htCurrentImage}/>
         </div>
         <Footer props = {props.news}/>
     </div>;
@@ -41,6 +41,12 @@ export function isItPopular(newsItem) {
         return true;
     }
     return timeInHours >= 12 && pointsSoFar >= 120;
+}
+
+export function processSubtitle(subtitle){
+    if(subtitle === undefined) return subtitle;
+    else
+    return subtitle.length <= 50 ? subtitle : (subtitle.substring(0,100) + subtitle.substring(50,).substring(0, subtitle.substring(50,).indexOf(' ')) + '...');
 }
 
 export default NewsCard1;

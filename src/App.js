@@ -5,7 +5,7 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import SamplePage from "./designSections";
+import SamplePage, {createPage} from "./designSections";
 
 export default class App extends React.Component{
     render() {
@@ -45,12 +45,8 @@ function MainPage(props) {
     let daysName = tabNameGenerator();
     daysName.unshift('Latest', 'Yesterday');
 
-    let [news, setNews] = useState(undefined);
+    let [newsCards, setNews] = useState(undefined);
     // let [isLoading, setLoading] = useState();
-    useEffect(() => {
-        getNews();
-    },[props.location.state.dayNumber]);
-
     async function getNews() {
         setNews(undefined);
         let newsUrl = `https://hacker-times.s3-us-west-1.amazonaws.com/${props.location.state === undefined ? 1 : props.location.state.dayNumber}dayStories`;
@@ -58,12 +54,17 @@ function MainPage(props) {
         // let response = await fetch('https://hacker-times.s3-us-west-1.amazonaws.com/3dayStories');
         let newsList = await response.json();
         let data =  newsList.top;
+        let cards = await createPage(data);
         // data = data.filter((e) => isItPopular(e));
-        setNews(data);
+        setNews(cards);
         // console.log('Comppleted nesws with ', news);
-        setTimeout(()=>{
-        }, 2500);
+
     }
+    useEffect(() => {
+        getNews();
+    },[props.location.state]);
+
+
 
     return (
         <div className="App">
@@ -81,7 +82,9 @@ function MainPage(props) {
                 <h1 className="main-title">McLaren Times</h1>
                 <DaysList strings={daysName}/>
 
-                {news !== undefined ? <NewsPage news={news}/> : <div className={'loading-batch'}>Loading</div>}
+                {newsCards !== undefined ? <div className={"samples-list"}>
+                    {newsCards.map(e => e)}
+                </div> : <div className={'loading-batch'}>Loading</div>}
             </div>
         </div>
     );

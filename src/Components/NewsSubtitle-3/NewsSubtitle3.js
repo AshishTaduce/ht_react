@@ -1,13 +1,10 @@
 import React from "react";
 import './_NewsSubtitle.css'
-import Truncate from "react-truncate";
+import {processSubtitle} from "../NewsCard1";
 
 function NewsSubtitle3(props) {
     return <div className={'section-3-news'}>
-        <Truncate lines={5} ellipsis='...'>
-
-            {props.data}
-        </Truncate>
+            {processSubtitle(props.data)}
     </div>;
 }
 

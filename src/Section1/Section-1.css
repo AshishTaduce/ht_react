@@ -3,16 +3,23 @@
     margin: 8px 0;
     border-bottom: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
-    padding: 36px 0;
+    padding: 16px 0;
+}
 
-
+.popular-image {
+    width: 100%;
+    max-height: 400px;
+    /*padding-bottom: 16px;*/
+    /*display: flex;*/
+    justify-content: center;
+    object-fit: contain;
+    align-items: center;
 }
 
 .popular-newscard {
     display: flex;
     flex-direction: column;
     width: 100%;
-    flex: 1;
     margin-bottom: 8px;
 }
 
@@ -24,21 +31,38 @@
 
 .big-image{
     width: 100%;
-    max-height: 50%;
-    padding-bottom: 16px;
+    max-height: 150px;
+    /*padding-bottom: 16px;*/
+    /*display: flex;*/
+    justify-content: center;
+    object-fit: contain;
+    align-items: center;
 }
 
 .big-image-div{
-    margin-top: 8px;
-    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    background-color: #e5e5e5;
+    max-height: 400px;
 }
 
-.popular-column .big-image-div {
-    padding: 0 16px 0 0;
+.popular-image-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    background-color: #e5e5e5;
+    max-height: 200px;
+}
+
+.popular-column .big-image-div .popular-image-div{
+    margin: 0 16px 0 0;
 }
 
 .unpopular-column{
-    height: 100%;
+    /*height: 100%;*/
     flex: 1;
     display: flex;
     flex-direction: column;

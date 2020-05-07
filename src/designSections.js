@@ -1,77 +1,86 @@
 import {isItPopular} from "./Components/NewsCard1";
 import React from "react";
-import NewsCard2 from "./Components/NewsCard2";
+import Section1 from "./Section1";
+import Section2 from "./Section2";
+import Section3 from "./Section3";
 
-function createPage(newsList){
-    let requiredSection = 1;
+let popularStory = (newsItem) =>
+    (isItPopular(newsItem) && (newsItem.htCurrentImage));
+let averageStory = (newsItem) =>
+    (newsItem.htCurrentSubtitle !== undefined);
+let smallStory = (newsItem) =>
+    !isItPopular(newsItem)
+    && newsItem.htCurrentImage === undefined
+    && newsItem.htCurrentSubtitle === undefined;
+
+export function createPage(newsList){
+
     let result = [];
-    while(newsList.length > 20){
-        if(requiredSection === 1){
-            let temp = [];
-            requiredSection++;
-            let [storyBlock, newsUsed] = generateStoryBlock(newsList);
-            newsList.splice(0, newsUsed);
-            result.push(storyBlock);
+    while (newsList.length > 20){
+        if(newsList.findIndex(popularStory)){
+            let popularNews = newsList.splice(newsList.findIndex(popularStory), 1)[0];
+            let [col1] = generateStoryBlock(newsList);
+            let [col2, newsUsed2] = generateStoryBlock(newsList);
+            let section1 = (<div>
+                <Section1 popularNews={popularNews}
+                          column1={col1}
+                          column2={col2}
+                />
+            </div>)
+            newsList = newsUsed2;
+            result.push(section1);
         }
-        else if(requiredSection === 2){
-            requiredSection++;
-            let [storyBlock, newsUsed] = generateStoryBlock(newsList);
-            newsList.splice(0, newsUsed);
-            result.push(storyBlock);
+        let newsItemList = [];
+        for (let i = 0; i < 4; i++) {
+            let [storyBlock, newNews] = generateStoryBlock(newsList);
+            newsItemList.push(storyBlock);
+            newsList = newNews;
         }
-        else if(requiredSection === 3){
-            requiredSection = 1;
-            let [storyBlock, newsUsed] = generateStoryBlock(newsList);
-            newsList.splice(0, newsUsed);
-            result.push(storyBlock);
-        }
+        let section2 = (
+            <div>
+                <Section2 storyBlocks={newsItemList}/>
+            </div>
+        );
+        console.log('News Left is:', newsList.length, result.length);
+        let sec3 = [newsList.splice(newsList.findIndex(averageStory), 1)[0], newsList.splice(newsList.findIndex(averageStory), 1)[0]];
+        let section3 = (<div><Section3 newsItemList={sec3}/></div>);
+        result.push(section2);
+        result.push(section3);
     }
     return result;
 }
 
-function generateStoryBlock(newsList){
-    let popularStory = (newsItem) =>
-        isItPopular(newsItem);
-    let averageStory = (newsItem) =>
-        !isItPopular(newsItem)
-        && newsItem.htCurrentImage !== undefined;
-    let smallStory = (newsItem) =>
-        !isItPopular(newsItem)
-        && newsItem.htCurrentImage === undefined;
-    if(popularStory(newsList[0])){
+function generateStoryBlock(newsList,){
+    if(newsList.find(popularStory)){
         return (
-            [<div className={'story-block'}>
-                {NewsCard2(newsList.splice(0,1)[0], true)}
-                {NewsCard2(newsList.splice(newsList.findIndex(smallStory),1)[0] ,false)}
-            </div>, 2]
+            [[newsList.splice(newsList.findIndex(popularStory),1)[0],
+                newsList.splice(newsList.findIndex(averageStory),1)[0]], newsList]
         );
     }
-    else if(averageStory(newsList[0])){
-        let news1 = newsList.splice(0,1)[0];
-        let news2 = newsList.splice(newsList.findIndex(averageStory)[0], 1)[0];
-        if((news1.htCurrentSubtitle !== undefined || news1.htCurrentSubtitle.length < 60) && (news1.htCurrentSubtitle !== undefined || news2.htCurrentSubtitle.length < 60)){
-            return (
-                [<div className={'story-block'}>
-                    {NewsCard2(news1, false)}
-                    {NewsCard2(news2, false)}
-                    {NewsCard2(newsList.splice(newsList.findIndex(averageStory)[0], 1)[0], false)}
-                </div>, 2]
-            );
-        }
-        else return (
-            [<div className={'story-block'}>
-                {NewsCard2(news1, false)}
-                {NewsCard2(news2, false)}
-            </div>, 2]
+
+    else if(newsList.find(averageStory)){
+        let news1 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
+        let news2 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
+        return (
+            [[news1,news2,], newsList]
         );
     }
-    else if(smallStory(newsList[0])){
+
+    else if(newsList.find(smallStory)){
         return (
-            [<div className={'story-block'}>
-                {NewsCard2(newsList.splice(0,1)[0], false)}
-                {NewsCard2(newsList.splice(newsList.findIndex(smallStory),1)[0], false)}
-                {NewsCard2(newsList.splice(newsList.findIndex(smallStory),1)[0], false)}
-            </div>, 3]
+            [
+                [newsList.splice(newsList.findIndex(smallStory),1)[0],
+                    newsList.splice(newsList.findIndex(smallStory),1)[0],
+                    newsList.splice(newsList.findIndex(smallStory),1)[0]]
+                , newsList]
+        );
+    }
+
+    else {
+        console.log('Entered the last else');
+        return (
+            [newsList.splice(0,3)
+                , newsList]
         );
     }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import './_NewsSubtitle.css'
-import Truncate from 'react-truncate';
+import {processSubtitle} from "../NewsCard1";
 
 function NewsSubtitle1(props) {
     return <div className={props.data === undefined ? '' :"news-subtitle"}>
@@ -8,9 +8,7 @@ function NewsSubtitle1(props) {
             ? null
             :<img src={props.imageUrl} alt=""  className= "news-image-1"/>
         }
-        <Truncate lines={5} ellipsis='...' >
-            {props.data === undefined ? null :props.data}
-        </Truncate>
+            {props.data === undefined ? null :processSubtitle(props.data)}
     </div>;
 }
 

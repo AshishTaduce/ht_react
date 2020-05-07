@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbed75cf-44dd-4aef-9f90-4db644e01cc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/designSections.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DaysList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaysList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard1/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard1/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard2/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard2/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard3/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard3/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/NewsSubtitle1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/NewsSubtitle1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/_NewsSubtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/_NewsSubtitle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/NewsSubtitle2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/NewsSubtitle2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/_NewsSubtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-2/_NewsSubtitle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/NewsSubtitle3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-3/NewsSubtitle3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NewsTitle/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsTitle/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section1/Section-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section1/Section-1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Section1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section1/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section2/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section3/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section3/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/designSections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/designSections.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +71,18 @@
       <recent name="D:\Projects\hackertimes-react\src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -72,6 +95,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.build" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -167,7 +195,15 @@
       <workItem from="1588176027824" duration="475000" />
       <workItem from="1588241251840" duration="7912000" />
       <workItem from="1588309605498" duration="51000" />
-      <workItem from="1588581730043" duration="9559000" />
+      <workItem from="1588581730043" duration="10535000" />
+      <workItem from="1588648031015" duration="2401000" />
+      <workItem from="1588655546361" duration="612000" />
+      <workItem from="1588666078265" duration="14364000" />
+      <workItem from="1588736687440" duration="24000" />
+      <workItem from="1588753584529" duration="11907000" />
+      <workItem from="1588766027555" duration="1023000" />
+      <workItem from="1588827322253" duration="31000" />
+      <workItem from="1588841510141" duration="6769000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented dynamic tabs'">
       <created>1587555857824</created>
@@ -183,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588153283747</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changing news tab works now. Gonna use function to generate sections">
+      <created>1588593037231</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588593037231</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,49 +247,55 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented dynamic tabs'" />
     <MESSAGE value="Stuck in forever loop of fetching" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stuck in forever loop of fetching" />
+    <MESSAGE value="Changing news tab works now. Gonna use function to generate sections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing news tab works now. Gonna use function to generate sections" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#ESLint" timestamp="1588149913051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1588149913051" />
-    <state x="45" y="0" key="CommitChangelistDialog2" timestamp="1588153279640">
+    <state x="133" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588841579977">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="45" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588153279640" />
+    <state x="133" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588841579977" />
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1588593034947">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588593034947" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1588151459211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1588151459211" />
-    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1588309654232">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="495" y="119" key="FileChooserDialogImpl" timestamp="1588765655740">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="495" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588765655740" />
     <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588309654232" />
-    <state width="661" height="171" key="GridCell.Tab.0.bottom" timestamp="1588592427177">
+    <state width="667" height="160" key="GridCell.Tab.0.bottom" timestamp="1588844223824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588592427177" />
+    <state width="667" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588844223824" />
     <state width="1579" height="216" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588245898018" />
-    <state width="661" height="171" key="GridCell.Tab.0.center" timestamp="1588592427176">
+    <state width="667" height="160" key="GridCell.Tab.0.center" timestamp="1588844223824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588592427176" />
+    <state width="667" height="160" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588844223824" />
     <state width="1579" height="216" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588245898018" />
-    <state width="661" height="171" key="GridCell.Tab.0.left" timestamp="1588592427176">
+    <state width="667" height="160" key="GridCell.Tab.0.left" timestamp="1588844223824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588592427176" />
+    <state width="667" height="160" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588844223824" />
     <state width="1579" height="216" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588245898018" />
-    <state width="661" height="171" key="GridCell.Tab.0.right" timestamp="1588592427176">
+    <state width="667" height="160" key="GridCell.Tab.0.right" timestamp="1588844223824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588592427176" />
+    <state width="667" height="160" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588844223824" />
     <state width="1579" height="216" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588245898018" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1588153629280">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1588593045249">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588153629280" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588593045249" />
     <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588151459211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -255,9 +304,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="191" key="git4idea.ui.GitUnstashDialog/0.0.1366.728@0.0.1366.728" timestamp="1588151185932" />
-    <state x="95" y="164" width="672" height="677" key="run.anything.popup" timestamp="1588065379395">
+    <state x="95" y="164" width="672" height="677" key="run.anything.popup" timestamp="1588845089273">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="95" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588065379395" />
+    <state x="95" y="164" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588845089273" />
   </component>
 </project>

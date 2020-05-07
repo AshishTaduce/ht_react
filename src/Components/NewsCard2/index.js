@@ -8,7 +8,7 @@ import NewsSubtitle1 from "../NewsSubtitle-1/NewsSubtitle1";
 function NewsCard2(props, isItPopular) {
     return  isItPopular
         ? <div className="popular-newscard">
-            <div className="big-image-div">
+            <div className="popular-image-div">
                 <img
                     src={props.htCurrentImage}
                     alt=""

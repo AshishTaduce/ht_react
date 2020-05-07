@@ -4,6 +4,10 @@
   font-family: 'Noto Serif', serif;
 }
 
+:root {
+  --subtitle-font-size: 14px;
+}
+
 .App {
   display: flex;
   justify-content: flex-start;
@@ -41,12 +45,17 @@
   justify-content: flex-start;
   align-content: center;
   flex: 1;
-  height: 100vh;
+  height: auto;
+  border-left: #e5e5e5 1px solid;
+}
+
+.story-block:first-child{
+  border-left: 0;
 }
 
 .samples-list{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .eee{
