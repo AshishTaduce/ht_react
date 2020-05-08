@@ -8,6 +8,10 @@
   --subtitle-font-size: 14px;
 }
 
+a{
+  color: rgb(40,60,74);
+}
+
 .App {
   display: flex;
   justify-content: flex-start;
@@ -47,10 +51,19 @@
   flex: 1;
   height: auto;
   border-left: #e5e5e5 1px solid;
+  padding: 0 8px;
 }
 
 .story-block:first-child{
   border-left: 0;
+}
+
+.section-2 .story-block:first-child{
+  padding-left: 0;
+}
+
+.story-block:last-child{
+  padding-right: 0;
 }
 
 .samples-list{

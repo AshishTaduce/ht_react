@@ -24,10 +24,10 @@ function Section1(props) {
             </div>
             <Footer props = {props.popularNews}/>
         </div>
-        <div className={"unpopular-column"}>
+        <div className={"unpopular-column story-block"}>
             {props.column1.map((newsItem) => <NewsCard1 news = {newsItem} isPopular = {isItPopular(newsItem)}/>)}
         </div>
-        <div className={"unpopular-column"}>
+        <div className={"unpopular-column story-block"}>
             {props.column2.map((newsItem) => <NewsCard1 isPopular = {isItPopular(newsItem)} news = {newsItem}/>)}
         </div>
     </div>;

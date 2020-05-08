@@ -1,7 +1,7 @@
 
 
 .news-subtitle {
-    padding: 0 8px;
+    /*margin: 0 8px;*/
     font-size: var(--subtitle-font-size);
     margin-bottom: 8px;
 }

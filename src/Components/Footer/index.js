@@ -6,13 +6,13 @@ export default function Footer(props){
         <div className={'footer'}>
             <div className={'author'}>
                 <div>{getSource(props.props.url)}</div>
-                <div className="point-count">
-                    {props.props.score} points
+                <div className="time-published">
+                    {processDate(props.props.time)} ago
                 </div>
             </div>
             <Comments
                 comments = {props.props.descendants}
-                time = {props.props.htBatchTime}
+                score = {props.props.score}
             />
         </div>
     )
@@ -33,12 +33,12 @@ function Comments(props) {
     return <div className="comments-points">
         <div className="comments">
             <img src={ReactLogo} alt="" className={'icons'}/>
-            {props.comments} Comments
+             {props.comments} Comments
         </div>
         <div className="points">
 
-            <div className="time-published">
-                {processDate(props.time)} ago
+            <div className="point-count">
+                {props.score} points
             </div>
         </div>
     </div>

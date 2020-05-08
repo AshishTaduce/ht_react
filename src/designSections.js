@@ -5,13 +5,27 @@ import Section2 from "./Section2";
 import Section3 from "./Section3";
 
 let popularStory = (newsItem) =>
-    (isItPopular(newsItem) && (newsItem.htCurrentImage));
+    (isItPopular(newsItem)
+        && (newsItem.htCurrentImage)
+    );
 let averageStory = (newsItem) =>
     (newsItem.htCurrentSubtitle !== undefined);
 let smallStory = (newsItem) =>
     !isItPopular(newsItem)
     && newsItem.htCurrentImage === undefined
     && newsItem.htCurrentSubtitle === undefined;
+
+function doesImageLoads(imageUrl) {
+    let image = new Image();
+    image.src = imageUrl;
+    image.onload =function () {
+        return true;
+    }
+    image.onerror =function (){
+        console.log('Failed to load Image at: ',imageUrl);
+        return false;
+    }
+}
 
 export function createPage(newsList){
 
@@ -51,18 +65,19 @@ export function createPage(newsList){
 }
 
 function generateStoryBlock(newsList,){
-    if(newsList.find(popularStory)){
-        return (
-            [[newsList.splice(newsList.findIndex(popularStory),1)[0],
-                newsList.splice(newsList.findIndex(averageStory),1)[0]], newsList]
-        );
-    }
-
-    else if(newsList.find(averageStory)){
+    if(newsList.find(averageStory)){
         let news1 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
         let news2 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
         return (
             [[news1,news2,], newsList]
+        );
+    }
+
+    else
+    if(newsList.find(popularStory)){
+        return (
+            [[newsList.splice(newsList.findIndex(popularStory),1)[0],
+                newsList.splice(newsList.findIndex(averageStory),1)[0]], newsList]
         );
     }
 

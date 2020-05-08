@@ -14,7 +14,7 @@ function DaysList(props) {
                             dayNumber: index + 1,
                         }
                     }
-                } className="day-name">
+                } style={{ textDecoration: 'none' }} className="day-name">
                     {element.toUpperCase()}
                 </Link>)
                 })

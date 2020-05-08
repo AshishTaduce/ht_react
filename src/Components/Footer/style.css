@@ -1,14 +1,12 @@
 .footer{
-    color: gray;
-    padding: 0 8px 8px;
-
+    color: rgb(40,60,74);
 }
 
 .comments-points{
     display: flex;
     flex-direction: row;
     font-size: 11px;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
     /*border-bottom: #e5e5e5 1px solid;*/
 }
 
@@ -18,7 +16,7 @@
 
 .comments{
     display: flex;
-    font-weight: bold;
+    font-weight: 600;
     justify-content: start;
     align-items: center;
     flex: 4;
@@ -33,25 +31,25 @@
     justify-content: flex-end;
 }
 
-.time-published{
-    /*padding-left: 8px;*/
-    font-size: 11px;
-
-}
-
 .author {
     font-size: 11px;
-
+    color: rgba(183,180,172,0.5);
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
 
     /*padding: 8px;*/
 }
 
+.time-published{
+    /*padding-left: 8px;*/
+    color: rgb(40,60,74);
+    font-size: 11px;
+}
+
 .icons {
-    filter: invert(84%) sepia(10%) saturate(158%) hue-rotate(4deg) brightness(85%) contrast(89%);
+    /*filter: invert(84%) sepia(10%) saturate(158%) hue-rotate(4deg) brightness(85%) contrast(89%);*/
     width: 16px;
     height: 16px;
-    /*padding: 8px 8px 4px 0;*/
+    margin-right: 4px;
 }

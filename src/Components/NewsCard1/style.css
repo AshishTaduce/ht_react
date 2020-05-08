@@ -3,7 +3,9 @@
     flex-direction: column;
     flex: 1;
     height: 100%;
-    margin: 0 8px;
+    /*margin: 0 8px;*/
+    margin:  8px 0;
+    padding: 8px 0;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -13,6 +15,8 @@
 
 .news-1{
     display: flex;
+    word-wrap: break-word;
+
 }
 
 .news-image-1 {

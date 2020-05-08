@@ -44,9 +44,13 @@ export function isItPopular(newsItem) {
 }
 
 export function processSubtitle(subtitle){
+    if(subtitle !== undefined && subtitle.split(' ').length === 1){
+        console.log('Found single long word of ', subtitle, subtitle.substring(0,10))
+        return `${subtitle.substring(0, 10)}...`;
+    }
     if(subtitle === undefined) return subtitle;
     else
-    return subtitle.length <= 50 ? subtitle : (subtitle.substring(0,100) + subtitle.substring(50,).substring(0, subtitle.substring(50,).indexOf(' ')) + '...');
+    return subtitle.length <= 50 ? subtitle : (subtitle.substring(0,subtitle.substring(0,100).lastIndexOf(' '))+ '...');
 }
 
 export default NewsCard1;
