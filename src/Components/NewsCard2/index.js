@@ -10,39 +10,29 @@ function NewsCard2(props, isItPopular) {
         ? <div className="popular-newscard">
             <div className="popular-image-div">
                 <img
+                    onClick={() => window.open(props.url)}
                     src={props.htCurrentImage}
                     alt=""
-                    className="big-image"
+                    className="big-image link"
                 />
             </div>
             <div className="news-popular">
                 <NewsTitle
+                    url = {props.url}
                     title={props.title}
                     isPopular={false}
                 />
-                <NewsSubtitle1 data={props.htCurrentSubtitle}/>
+                <NewsSubtitle1 url = {props.url} data={props.htCurrentSubtitle}/>
             </div>
-            <Footer props = {props}/>
+            <Footer url={`https://news.ycombinator.com/item?id=${props.id}`} props = {props}/>
         </div>
         : <div className={"news-card-2"}>
-        <NewsTitle title={props.title} isPopular={false}/>
+        <NewsTitle url = {props.url} title={props.title} isPopular={false}/>
         <div className={'news-2'}>
-            <NewsSubtitle2 data={props.htCurrentSubtitle} imageUrl = {props.htImage}/>
+            <NewsSubtitle2 url = {props.url} data={props.htCurrentSubtitle} imageUrl = {props.htImage}/>
         </div>
-
-
-        <Footer props = {props}/>
+        <Footer url={`https://news.ycombinator.com/item?id=${props.id}`} props = {props}/>
     </div>;
-}
-function isItPopular(newsItem) {
-    let target = new Date(newsItem.htBatchTime * 1000);
-    let timeInHours = new Date().getHours() - target.getHours();
-    let pointsSoFar = newsItem.score;
-    if ((timeInHours < 12 && timeInHours > 0) &&
-        pointsSoFar >= (timeInHours * 10)) {
-        return true;
-    }
-    return timeInHours >= 12 && pointsSoFar >= 120;
 }
 
 export default NewsCard2;

@@ -9,28 +9,28 @@ let popularStory = (newsItem) =>
         && (newsItem.htCurrentImage)
     );
 let averageStory = (newsItem) =>
-    (newsItem.htCurrentSubtitle !== undefined);
+    (newsItem.htCurrentSubtitle !== undefined && !isItPopular(newsItem));
 let smallStory = (newsItem) =>
     !isItPopular(newsItem)
     && newsItem.htCurrentImage === undefined
     && newsItem.htCurrentSubtitle === undefined;
 
-function doesImageLoads(imageUrl) {
-    let image = new Image();
-    image.src = imageUrl;
-    image.onload =function () {
-        return true;
-    }
-    image.onerror =function (){
-        console.log('Failed to load Image at: ',imageUrl);
-        return false;
-    }
-}
+// function doesImageLoads(imageUrl) {
+//     let image = new Image();
+//     image.src = imageUrl;
+//     image.onload =function () {
+//         return true;
+//     }
+//     image.onerror =function (){
+//         console.log('Failed to load Image at: ',imageUrl);
+//         return false;
+//     }
+// }
 
 export function createPage(newsList){
 
     let result = [];
-    while (newsList.length > 20){
+    while (newsList.length > 15){
         if(newsList.find(popularStory)){
             let popularNews = newsList.splice(newsList.findIndex(popularStory), 1)[0];
             let [col1] = generateStoryBlock(newsList);
@@ -68,13 +68,17 @@ function generateStoryBlock(newsList,){
     if(newsList.find(averageStory)){
         let news1 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
         let news2 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
+        if(!news1.htCurrentImage || !news2.htCurrentImage) {
+            return (
+                [[news1,news2, newsList.splice(newsList.findIndex(averageStory), 1)[0]], newsList]
+            )
+        }
         return (
-            [[news1,news2,], newsList]
+            [[news1, news2,], newsList]
         );
     }
 
-    else
-    if(newsList.find(popularStory)){
+    else if(newsList.find(popularStory)){
         return (
             [[newsList.splice(newsList.findIndex(popularStory),1)[0],
                 newsList.splice(newsList.findIndex(averageStory),1)[0]], newsList]

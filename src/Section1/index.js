@@ -8,21 +8,22 @@ import Footer from "../Components/Footer";
 function Section1(props) {
     return <div className="section-1">
         <div className="popular-column">
-            <div className="big-image-div">
+            <div className="big-image-div" onClick={() => window.open(props.popularNews.url)}>
                 {props.popularNews.htCurrentImage === undefined ? null : <img
                     src={props.popularNews.htCurrentImage}
                     alt=""
-                    className="popular-image"
+                    className="popular-image link"
                 />}
             </div>
-            <div className="news-popular">
+            <div className="news-popular link">
                 <NewsTitle
+                    url = {props.popularNews.url}
                     title={props.popularNews.title}
                     isPopular={true}
                 />
-                <NewsSubtitle1 data={processSubtitle(props.popularNews.htCurrentSubtitle)}/>
+                <NewsSubtitle1 url = {props.popularNews.url} data={processSubtitle(props.popularNews.htCurrentSubtitle)}/>
             </div>
-            <Footer props = {props.popularNews}/>
+            <Footer url = {props.popularNews.url} props = {props.popularNews}/>
         </div>
         <div className={"unpopular-column story-block"}>
             {props.column1.map((newsItem) => <NewsCard1 news = {newsItem} isPopular = {isItPopular(newsItem)}/>)}

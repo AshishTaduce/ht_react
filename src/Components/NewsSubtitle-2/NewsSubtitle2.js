@@ -4,7 +4,7 @@ import Truncate from "react-truncate";
 import {processSubtitle} from "../NewsCard1";
 
 function NewsSubtitle2(props) {
-    return <div className="news-subtitle">
+    return <div className="news-subtitle link" onClick={() => window.open(props.url)}>
         {props.imageUrl === undefined
             ? null
             :<img src={props.imageUrl} alt=""  className= "news-image-2"/>

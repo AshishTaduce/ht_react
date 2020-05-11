@@ -13,6 +13,7 @@ export default function Footer(props){
             <Comments
                 comments = {props.props.descendants}
                 score = {props.props.score}
+                url = {props.url}
             />
         </div>
     )
@@ -33,7 +34,7 @@ function Comments(props) {
     return <div className="comments-points">
         <div className="comments">
             <img src={ReactLogo} alt="" className={'icons'}/>
-             {props.comments} Comments
+             <div className={'link'} onClick={() => window.open(props.url)}>{props.comments} Comments</div>
         </div>
         <div className="points">
 
