@@ -23,7 +23,7 @@ function Section1(props) {
                 />
                 <NewsSubtitle1 url = {props.popularNews.url} data={processSubtitle(props.popularNews.htCurrentSubtitle)}/>
             </div>
-            <Footer url = {props.popularNews.url} props = {props.popularNews}/>
+            <Footer url = {`https://news.ycombinator.com/item?id=${props.popularNews.id}`} props = {props.popularNews}/>
         </div>
         <div className={"unpopular-column story-block"}>
             {props.column1.map((newsItem) => <NewsCard1 news = {newsItem} isPopular = {isItPopular(newsItem)}/>)}

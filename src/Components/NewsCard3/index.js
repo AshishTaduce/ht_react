@@ -9,7 +9,11 @@ function NewsCard3(props) {
         {props.htCurrentImage === undefined
             ? null
             // :<div className={'news-3-image-div'}>
-                :<img src={props.htCurrentImage} alt=""  className= "news-image-3"/>
+                :<img src={props.htCurrentImage} alt=""
+                      className= "news-image-3 link"
+                      onClick={() => window.open(props.url)}
+            />
+
             // </div>
         }
 

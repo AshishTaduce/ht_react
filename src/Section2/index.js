@@ -1,7 +1,7 @@
 import React from "react";
 import NewsCard2 from "../Components/NewsCard2";
 import './style.css'
-import NewsCard1, {isItPopular} from "../Components/NewsCard1";
+import {isItPopular} from "../Components/NewsCard1";
 
 function Section2(props) {
     return(

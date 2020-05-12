@@ -30,7 +30,8 @@ let smallStory = (newsItem) =>
 export function createPage(newsList){
 
     let result = [];
-    while (newsList.length > 15){
+
+    function createSection1() {
         if(newsList.find(popularStory)){
             let popularNews = newsList.splice(newsList.findIndex(popularStory), 1)[0];
             let [col1] = generateStoryBlock(newsList);
@@ -44,22 +45,38 @@ export function createPage(newsList){
             newsList = newsUsed2;
             result.push(section1);
         }
-        let newsItemList = [];
-        for (let i = 0; i < 4; i++) {
-            let [storyBlock, newNews] = generateStoryBlock(newsList);
-            newsItemList.push(storyBlock);
-            newsList = newNews;
+    }
+
+    function createSection3() {
+        if(newsList.length > 1){
+            let sec3 = [newsList.splice(newsList.findIndex(averageStory), 1)[0], newsList.splice(newsList.findIndex(averageStory), 1)[0]];
+            let section3 = (<div><Section3 newsItemList={sec3}/></div>);
+            result.push(section3);
         }
-        let section2 = (
-            <div>
+    }
+
+    function createSection2() {
+        if(newsList.length > 11){
+            let newsItemList = [];
+            for (let i = 0; i < 4; i++) {
+                let [storyBlock, newNews] = generateStoryBlock(newsList);
+                newsItemList.push(storyBlock);
+                newsList = newNews;
+            }
+            let section2 = (<div>
                 <Section2 storyBlocks={newsItemList}/>
-            </div>
-        );
+            </div>);
+            result.push(section2);
+        }
+    }
+
+    while (newsList.length > 1){
+        createSection1();
+        createSection2();
+        createSection3();
+        createSection3();
+        createSection2();
         console.log('News Left is:', newsList.length, result.length);
-        let sec3 = [newsList.splice(newsList.findIndex(averageStory), 1)[0], newsList.splice(newsList.findIndex(averageStory), 1)[0]];
-        let section3 = (<div><Section3 newsItemList={sec3}/></div>);
-        result.push(section2);
-        result.push(section3);
     }
     return result;
 }
