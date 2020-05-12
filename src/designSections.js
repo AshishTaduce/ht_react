@@ -3,17 +3,20 @@ import React from "react";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
+import Section4 from "./Section4";
 
+let section3News = (newsItem) =>
+    ((newsItem.htCurrentImage && newsItem.htCurrentSubtitle) || newsItem.htCurrentImage);
 let popularStory = (newsItem) =>
     (isItPopular(newsItem)
         && (newsItem.htCurrentImage)
     );
 let averageStory = (newsItem) =>
-    (newsItem.htCurrentSubtitle !== undefined && !isItPopular(newsItem));
+        (newsItem.htCurrentSubtitle !== undefined && !isItPopular(newsItem));
 let smallStory = (newsItem) =>
-    !isItPopular(newsItem)
-    && newsItem.htCurrentImage === undefined
-    && newsItem.htCurrentSubtitle === undefined;
+        !isItPopular(newsItem)
+        && newsItem.htCurrentImage === undefined
+        && newsItem.htCurrentSubtitle === undefined;
 
 // function doesImageLoads(imageUrl) {
 //     let image = new Image();
@@ -48,8 +51,8 @@ export function createPage(newsList){
     }
 
     function createSection3() {
-        if(newsList.length > 1){
-            let sec3 = [newsList.splice(newsList.findIndex(averageStory), 1)[0], newsList.splice(newsList.findIndex(averageStory), 1)[0]];
+        if(newsList.length > 1 && newsList.find(section3News)){
+            let sec3 = [newsList.splice(newsList.findIndex(section3News), 1)[0], newsList.splice(newsList.findIndex(section3News), 1)[0]];
             let section3 = (<div><Section3 newsItemList={sec3}/></div>);
             result.push(section3);
         }
@@ -70,14 +73,24 @@ export function createPage(newsList){
         }
     }
 
-    while (newsList.length > 1){
+    function createSection4() {
+        while (newsList.length > 1){
+            let sec3 = newsList.splice(0, 6);
+            let section3 = (<div><Section4 newsItemList={sec3}/></div>);
+            result.push(section3);
+        }
+    }
+
+    while (newsList.length > 11){
         createSection1();
         createSection2();
         createSection3();
         createSection3();
         createSection2();
         console.log('News Left is:', newsList.length, result.length);
+        if(newsList.find(section3News) === undefined) break;
     }
+    createSection4();
     return result;
 }
 

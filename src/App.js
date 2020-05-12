@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import DaysList from "./DaysList";
-import Section1 from "./Section1";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import SamplePage, {createPage} from "./designSections";
 
@@ -21,44 +18,19 @@ export default class App extends React.Component{
     }
 }
 
-function NewsPage(props) {
-    console.log('Inside news card with props:', props);
-    return <>
-        {<div>
-                <Section1
-                    popularNews={(props.news.splice(
-                            props.news.findIndex((element) => element.htCurrentImage !== undefined && isItPopular(element)),
-                            1)[0]
-                    )}
-                    newsItemList={props.news.splice(0, 6)}
-                />
-
-                <Section2 newsItemList={props.news.splice(0, 4)}/>
-
-                <Section3 newsItemList={props.news.splice(0, 2)}/>
-            </div>
-        }
-    </>;
-}
-
 function MainPage(props) {
     let daysName = tabNameGenerator();
     daysName.unshift('Latest', 'Yesterday');
 
     let [newsCards, setNews] = useState(undefined);
-    // let [isLoading, setLoading] = useState();
     async function getNews() {
         setNews(undefined);
         let newsUrl = `https://hacker-times.s3-us-west-1.amazonaws.com/${props.location.state === undefined ? 1 : props.location.state.dayNumber}dayStories`;
         let response =  await fetch(newsUrl);
-        // let response = await fetch('https://hacker-times.s3-us-west-1.amazonaws.com/3dayStories');
         let newsList = await response.json();
         let data =  newsList.top;
         let cards = await createPage(data);
-        // data = data.filter((e) => isItPopular(e));
         setNews(cards);
-        // console.log('Comppleted nesws with ', news);
-
     }
     useEffect(() => {
         getNews();

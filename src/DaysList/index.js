@@ -4,8 +4,9 @@ import './style.css';
 import {Link} from "react-router-dom";
 
 function DaysList(props) {
+    let active = 0;
     return (
-        <div className="days-menu">
+        <div className="days-menu" key = {active}>
             {props.strings.map((element, index) => {
                 return (<Link to={
                     {
@@ -14,7 +15,13 @@ function DaysList(props) {
                             dayNumber: index + 1,
                         }
                     }
-                } style={{ textDecoration: 'none' }} className="day-name">
+                } style={{ textDecoration: 'none' }}
+                              className={`day-name ${active === index ? 'active-tab' : ''}`}
+                              // onClick={() => {
+                              //     active = index;
+                              //     console.log(active, 'is the active tab indx');
+                              // }}
+                >
                     {element.toUpperCase()}
                 </Link>)
                 })
