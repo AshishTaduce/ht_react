@@ -37,15 +37,15 @@ export function createPage(newsList){
     function createSection1() {
         if(newsList.find(popularStory)){
             let popularNews = newsList.splice(newsList.findIndex(popularStory), 1)[0];
-            let [col1] = generateStoryBlock(newsList);
-            let [col2, newsUsed2] = generateStoryBlock(newsList);
+            let col1 = generateStoryBlock(newsList);
+            let col2 = generateStoryBlock(newsList);
             let section1 = (<div>
                 <Section1 popularNews={popularNews}
                           column1={col1}
                           column2={col2}
                 />
             </div>)
-            newsList = newsUsed2;
+            // newsList = newsUsed2;
             result.push(section1);
         }
     }
@@ -62,9 +62,9 @@ export function createPage(newsList){
         if(newsList.length > 11){
             let newsItemList = [];
             for (let i = 0; i < 4; i++) {
-                let [storyBlock, newNews] = generateStoryBlock(newsList);
+                let storyBlock = generateStoryBlock(newsList);
                 newsItemList.push(storyBlock);
-                newsList = newNews;
+                // newsList = newNews;
             }
             let section2 = (<div>
                 <Section2 storyBlocks={newsItemList}/>
@@ -100,36 +100,40 @@ function generateStoryBlock(newsList,){
         let news2 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
         if(!news1.htCurrentImage || !news2.htCurrentImage) {
             return (
-                [[news1,news2, newsList.splice(newsList.findIndex(averageStory), 1)[0]], newsList]
+                [news1,news2, newsList.splice(newsList.findIndex(averageStory), 1)[0]]
             )
         }
         return (
-            [[news1, news2,], newsList]
+            [news1, news2,]
         );
     }
 
     else if(newsList.find(popularStory)){
         return (
-            [[newsList.splice(newsList.findIndex(popularStory),1)[0],
-                newsList.splice(newsList.findIndex(averageStory),1)[0]], newsList]
+            [
+                newsList.splice(newsList.findIndex(popularStory),1)[0],
+                newsList.splice(newsList.findIndex(averageStory),1)[0]
+            ]
         );
     }
 
     else if(newsList.find(smallStory)){
         return (
-            [
-                [newsList.splice(newsList.findIndex(smallStory),1)[0],
+
+                [
                     newsList.splice(newsList.findIndex(smallStory),1)[0],
-                    newsList.splice(newsList.findIndex(smallStory),1)[0]]
-                , newsList]
+                    newsList.splice(newsList.findIndex(smallStory),1)[0],
+                    newsList.splice(newsList.findIndex(smallStory),1)[0]
+                ]
+
         );
     }
 
     else {
         console.log('Entered the last else');
         return (
-            [newsList.splice(0,3)
-                , newsList]
+            newsList.splice(0,3)
+
         );
     }
 }

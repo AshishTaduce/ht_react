@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbed75cf-44dd-4aef-9f90-4db644e01cc7" name="Default Changelist" comment="Clickable links, redone the pageGenerate logic to create news until a single or no newsItem are left.">
-      <change afterPath="$PROJECT_DIR$/src/Section4/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Section4/style.css" afterDir="false" />
+    <list default="true" id="cbed75cf-44dd-4aef-9f90-4db644e01cc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard3/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/_NewsSubtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsSubtitle-1/_NewsSubtitle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DaysList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaysList/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DaysList/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaysList/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Section4/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section4/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/designSections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/designSections.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +55,7 @@
       <recent name="D:\Projects\hackertimes-react\src\Components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -196,7 +193,9 @@
       <workItem from="1589026439582" duration="168000" />
       <workItem from="1589186023669" duration="11725000" />
       <workItem from="1589219742137" duration="405000" />
-      <workItem from="1589275119250" duration="8095000" />
+      <workItem from="1589275119250" duration="9066000" />
+      <workItem from="1589316155916" duration="26000" />
+      <workItem from="1589364000222" duration="3056000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented dynamic tabs'">
       <created>1587555857824</created>
@@ -261,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589279089954</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Introduced a section 4 to display news card with no image or subtitle at the end of the page&#10;Leaving no news behind. DayName tabs needs to be worked on along with the tilt in section 3">
+      <created>1589284365173</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589284365173</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +295,8 @@
     <MESSAGE value="Footer changed. Links have no predefined styles. Minor fit and finish also implemented" />
     <MESSAGE value="Clickable links, other than on card3 and popular column" />
     <MESSAGE value="Clickable links, redone the pageGenerate logic to create news until a single or no newsItem are left." />
-    <option name="LAST_COMMIT_MESSAGE" value="Clickable links, redone the pageGenerate logic to create news until a single or no newsItem are left." />
+    <MESSAGE value="Introduced a section 4 to display news card with no image or subtitle at the end of the page&#10;Leaving no news behind. DayName tabs needs to be worked on along with the tilt in section 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced a section 4 to display news card with no image or subtitle at the end of the page&#10;Leaving no news behind. DayName tabs needs to be worked on along with the tilt in section 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#ESLint" timestamp="1588149913051">
@@ -300,10 +307,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="133" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588849034380" />
-    <state x="98" y="0" key="CommitChangelistDialog2" timestamp="1589279140667">
+    <state x="98" y="0" key="CommitChangelistDialog2" timestamp="1589284361406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="98" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589279140667" />
+    <state x="98" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589284361406" />
     <state x="324" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.208.1366.728@0.0.1600.860" timestamp="1588938743734" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1588151459211">
       <screen x="0" y="0" width="1366" height="728" />
@@ -314,34 +321,34 @@
     </state>
     <state x="495" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588765655740" />
     <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588309654232" />
-    <state width="1339" height="160" key="GridCell.Tab.0.bottom" timestamp="1589279171111">
+    <state width="1339" height="75" key="GridCell.Tab.0.bottom" timestamp="1589364333846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589279171111" />
+    <state width="1339" height="75" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589364333846" />
     <state width="1339" height="160" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.208.1366.728@0.0.1600.860" timestamp="1588858764302" />
     <state width="1339" height="160" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588940690816" />
-    <state width="1339" height="160" key="GridCell.Tab.0.center" timestamp="1589279171111">
+    <state width="1339" height="75" key="GridCell.Tab.0.center" timestamp="1589364333845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="160" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589279171111" />
+    <state width="1339" height="75" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589364333845" />
     <state width="1339" height="160" key="GridCell.Tab.0.center/0.0.1600.860/1600.208.1366.728@0.0.1600.860" timestamp="1588858764300" />
     <state width="1339" height="160" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588940690816" />
-    <state width="1339" height="160" key="GridCell.Tab.0.left" timestamp="1589279171111">
+    <state width="1339" height="75" key="GridCell.Tab.0.left" timestamp="1589364333845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="160" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589279171111" />
+    <state width="1339" height="75" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589364333845" />
     <state width="1339" height="160" key="GridCell.Tab.0.left/0.0.1600.860/1600.208.1366.728@0.0.1600.860" timestamp="1588858764300" />
     <state width="1339" height="160" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588940690815" />
-    <state width="1339" height="160" key="GridCell.Tab.0.right" timestamp="1589279171111">
+    <state width="1339" height="75" key="GridCell.Tab.0.right" timestamp="1589364333846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1339" height="160" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589279171111" />
+    <state width="1339" height="75" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589364333846" />
     <state width="1339" height="160" key="GridCell.Tab.0.right/0.0.1600.860/1600.208.1366.728@0.0.1600.860" timestamp="1588858764302" />
     <state width="1339" height="160" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588940690816" />
-    <state x="275" y="53" key="Vcs.Push.Dialog.v2" timestamp="1589279189281">
+    <state x="275" y="53" key="Vcs.Push.Dialog.v2" timestamp="1589284513915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="53" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1589279189281" />
+    <state x="275" y="53" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1589284513915" />
     <state x="322" y="63" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.208.1366.728@0.0.1600.860" timestamp="1588938753907" />
     <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588151459211">
       <screen x="0" y="0" width="1366" height="728" />

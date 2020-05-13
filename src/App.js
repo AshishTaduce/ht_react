@@ -44,7 +44,7 @@ function MainPage(props) {
                 <meta charSet="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>McLaren Times</title>
-                <link rel="stylesheet" href="style.css"/>
+                <link rel="stylesheet" href="App.css"/>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap"
                       rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
