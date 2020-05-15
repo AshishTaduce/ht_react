@@ -13,13 +13,13 @@
     /*padding: 0 8px;*/
 }
 
-.unpopular-column .news-card-1:first-child{
-    margin-top: 0;
-    /*background-color: deepskyblue;*/
-}
-.unpopular-column .news-card-1:first-child .news-header{
-     margin-top: -12px;
-     background-color: deepskyblue;
+/*.unpopular-column .news-card-1:first-child{*/
+/*    margin-top: 0;*/
+/*    !*background-color: deepskyblue;*!*/
+/*}*/
+.story-block .news-card-1:first-child,.popular-news:first-child .news-header{
+     margin-top: -21px;
+     background-color: transparent;
  }
 
 .link:hover{

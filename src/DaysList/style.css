@@ -16,7 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
     height: 100%;
     border-left: 1px #e5e5e5 solid;
 }
@@ -25,12 +26,14 @@
 }
 
 .day-name:hover{
+    padding-bottom: 0;
     background-color: rgba(40, 60, 74, 0.5);
     font-weight: 600;
-    border-bottom: 4px solid dodgerblue;
+    border-bottom: 4px inset dodgerblue;
 }
 
 .active-tab{
+    padding-bottom: 0;
     border-bottom: 4px solid dodgerblue;
     font-weight: bold;
 }

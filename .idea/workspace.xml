@@ -4,14 +4,9 @@
     <list default="true" id="cbed75cf-44dd-4aef-9f90-4db644e01cc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NewsCard3/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsCard3/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/NewsTitle/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NewsTitle/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DaysList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaysList/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DaysList/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaysList/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Section1/Section-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section1/Section-1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Section1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Section1/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/designSections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/designSections.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +198,7 @@
       <workItem from="1589433631965" duration="193000" />
       <workItem from="1589449484999" duration="7562000" />
       <workItem from="1589497524775" duration="575000" />
-      <workItem from="1589533928387" duration="1334000" />
+      <workItem from="1589533928387" duration="5431000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented dynamic tabs'">
       <created>1587555857824</created>
@@ -282,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589367329984</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Minor fit n finish">
+      <created>1589535494076</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589535494076</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +314,8 @@
     <MESSAGE value="Clickable links, redone the pageGenerate logic to create news until a single or no newsItem are left." />
     <MESSAGE value="Introduced a section 4 to display news card with no image or subtitle at the end of the page&#10;Leaving no news behind. DayName tabs needs to be worked on along with the tilt in section 3" />
     <MESSAGE value="Active day underline implemented with minor fit n finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Active day underline implemented with minor fit n finish" />
+    <MESSAGE value="Minor fit n finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fit n finish" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#ESLint" timestamp="1588149913051">
@@ -323,10 +326,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="133" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588849034380" />
-    <state x="98" y="0" key="CommitChangelistDialog2" timestamp="1589367325748">
+    <state x="98" y="0" key="CommitChangelistDialog2" timestamp="1589535491708">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="98" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589367325748" />
+    <state x="98" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589535491708" />
     <state x="324" y="0" key="CommitChangelistDialog2/0.0.1600.860/1600.208.1366.728@0.0.1600.860" timestamp="1588938743734" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1588151459211">
       <screen x="0" y="0" width="1366" height="728" />
