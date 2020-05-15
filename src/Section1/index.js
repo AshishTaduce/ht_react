@@ -16,11 +16,12 @@ function Section1(props) {
                 />}
             </div>
             <div className="news-popular link">
-                <NewsTitle
+                <div className={'section1-popular-title'}>
+                    <NewsTitle
                     url = {props.popularNews.url}
                     title={props.popularNews.title}
                     isPopular={true}
-                />
+                /></div>
                 <NewsSubtitle1 url = {props.popularNews.url} data={processSubtitle(props.popularNews.htCurrentSubtitle)}/>
             </div>
             <Footer url = {`https://news.ycombinator.com/item?id=${props.popularNews.id}`} props = {props.popularNews}/>

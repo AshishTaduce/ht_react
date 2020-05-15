@@ -17,7 +17,7 @@ function DaysList(props) {
                         }
                     }
                 } style={{ textDecoration: 'none' }}
-                              className={`day-name ${active === index ? 'active-tab' : ''}`}
+                              className={`day-name ${active === index ? 'active-tab' : 'inactive-tab'}`}
                               onClick={() => {
                                   setActive(index);
                                   console.log(active, 'is the active tab index');

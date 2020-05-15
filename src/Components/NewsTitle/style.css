@@ -9,8 +9,18 @@
     color: rgb(40,60,74);
     font-size: 20px;
     margin-bottom: 8px;
+    padding-top: 8px;
     /*padding: 0 8px;*/
 }
+
+.unpopular-column .news-card-1:first-child{
+    margin-top: 0;
+    /*background-color: deepskyblue;*/
+}
+.unpopular-column .news-card-1:first-child .news-header{
+     margin-top: -12px;
+     background-color: deepskyblue;
+ }
 
 .link:hover{
  cursor: pointer;

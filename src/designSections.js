@@ -8,9 +8,7 @@ import Section4 from "./Section4";
 let section3News = (newsItem) =>
     ((newsItem.htCurrentImage && newsItem.htCurrentSubtitle) || newsItem.htCurrentImage);
 let popularStory = (newsItem) =>
-    (isItPopular(newsItem)
-        && (newsItem.htCurrentImage)
-    );
+    (isItPopular(newsItem) && (newsItem.htCurrentImage));
 let averageStory = (newsItem) =>
         (newsItem.htCurrentSubtitle !== undefined && !isItPopular(newsItem));
 let smallStory = (newsItem) =>
@@ -29,6 +27,8 @@ let smallStory = (newsItem) =>
 //         return false;
 //     }
 // }
+
+let lastBlockHadPopular = true;
 
 export function createPage(newsList){
 
@@ -95,7 +95,18 @@ export function createPage(newsList){
 }
 
 function generateStoryBlock(newsList,){
-    if(newsList.find(averageStory)){
+    lastBlockHadPopular = !lastBlockHadPopular;
+    console.log(lastBlockHadPopular,'has popular news:', newsList.find(popularStory))
+    if(newsList.find(popularStory) && !lastBlockHadPopular){
+        console.log('popular found')
+        return (
+            [
+                newsList.splice(newsList.findIndex(popularStory),1)[0],
+                newsList.splice(newsList.findIndex(averageStory),1)[0]
+            ]
+        );
+    }
+    else if(newsList.find(averageStory) ){
         let news1 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
         let news2 = newsList.splice(newsList.findIndex(averageStory), 1)[0];
         if(!news1.htCurrentImage || !news2.htCurrentImage) {
@@ -105,15 +116,6 @@ function generateStoryBlock(newsList,){
         }
         return (
             [news1, news2,]
-        );
-    }
-
-    else if(newsList.find(popularStory)){
-        return (
-            [
-                newsList.splice(newsList.findIndex(popularStory),1)[0],
-                newsList.splice(newsList.findIndex(averageStory),1)[0]
-            ]
         );
     }
 
