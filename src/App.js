@@ -6,8 +6,9 @@ import SamplePage, {createPage} from "./designSections";
 
 export default class App extends React.Component{
     render() {
+        console.log('kkk'+process.env.PUBLIC_URL)
         return (
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter>
                 <Switch>
                     <Route path={'/'} component ={MainPage} exact={true}/>
                     {/*<Route path={process.env.PUBLIC_URL + '/samples'} component ={SamplePage} exact={true}/>*/}
