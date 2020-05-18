@@ -7,7 +7,7 @@ import SamplePage, {createPage} from "./designSections";
 export default class App extends React.Component{
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route path={'/'} component ={MainPage} exact={true}/>
                     <Route path={'/samples'} component ={SamplePage} exact={true}/>
@@ -51,7 +51,10 @@ function MainPage(props) {
                       rel="stylesheet"/>
             </head>
             <div className={'main-body'}>
-                <h1 className="main-title">McLaren Times</h1>
+                <div className={'header'}>
+                    <h1 className="main-title">McLaren Times</h1>
+                    <img src={require("./app-icon.png")} alt="" className={'title-icon'}/>
+                </div>
                 <DaysList strings={daysName}/>
 
                 {newsCards !== undefined ? <div className={"samples-list"}>

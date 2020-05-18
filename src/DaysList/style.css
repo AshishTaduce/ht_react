@@ -29,12 +29,12 @@
     padding-bottom: 0;
     background-color: rgba(40, 60, 74, 0.5);
     font-weight: 600;
-    border-bottom: 4px inset dodgerblue;
+    border-bottom: 4px inset #55aad1;
 }
 
 .active-tab{
     padding-bottom: 0;
-    border-bottom: 4px solid dodgerblue;
+    border-bottom: 4px solid #55aad1;
     font-weight: bold;
 }
 
