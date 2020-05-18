@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b5e780960dd4c52b1b62ae6fdcefae95",
+    "revision": "8d72e7e6ad26dd8c3672cf376efaf34f",
     "url": "/ht_react/index.html"
   },
   {
-    "revision": "ebc128659fb35adfc157",
-    "url": "/ht_react/static/css/main.76801cc7.chunk.css"
+    "revision": "5d8eee620af29a068fe1",
+    "url": "/ht_react/static/css/main.3b00948c.chunk.css"
   },
   {
     "revision": "cc5814fcebe878cc43ef",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ht_react/static/js/2.a1e8c283.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ebc128659fb35adfc157",
-    "url": "/ht_react/static/js/main.b4f7d27b.chunk.js"
+    "revision": "5d8eee620af29a068fe1",
+    "url": "/ht_react/static/js/main.aef877e3.chunk.js"
   },
   {
     "revision": "e614231463cee04bd278",
     "url": "/ht_react/static/js/runtime-main.1ef871cb.js"
+  },
+  {
+    "revision": "1ee67604a04503c48202f4003b73794f",
+    "url": "/ht_react/static/media/app-icon.1ee67604.png"
   },
   {
     "revision": "6843fce189ed9ec0f6d3bf6c8debaf4f",
