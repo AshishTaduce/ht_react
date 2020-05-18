@@ -10,7 +10,7 @@ export default class App extends React.Component{
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route path={'/'} component ={MainPage} exact={true}/>
-                    <Route path={'/samples'} component ={SamplePage} exact={true}/>
+                    {/*<Route path={process.env.PUBLIC_URL + '/samples'} component ={SamplePage} exact={true}/>*/}
                     <Route path={'/:dayNumber'} component ={MainPage} exact={true}/>
                 </Switch>
             </BrowserRouter>
