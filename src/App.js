@@ -1,20 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import DaysList from "./DaysList";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import SamplePage, {createPage} from "./designSections";
+import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
+import {createPage} from "./designSections";
 
 export default class App extends React.Component{
     render() {
-        console.log('kkk'+process.env.PUBLIC_URL)
         return (
-            <BrowserRouter>
+            <HashRouter hashType={"slash"}>
                 <Switch>
                     <Route path={'/'} component ={MainPage} exact={true}/>
                     {/*<Route path={process.env.PUBLIC_URL + '/samples'} component ={SamplePage} exact={true}/>*/}
                     <Route path={'/:dayNumber'} component ={MainPage} exact={true}/>
                 </Switch>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
