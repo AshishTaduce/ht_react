@@ -9,12 +9,15 @@
     border-bottom: #e5e5e5 1px solid;
 }
 
+.news-card-3:first-child{
+    border: 0;
+}
+
 .news-image-3 {
     width: 50%;
     border-left: 1px solid #e5e5e5;
     max-height: 200px;
     object-fit: cover;
     margin-left: 8px;
-    margin-top: 8px;
-    margin-right: 19px;
+    margin-right: 8px;
 }

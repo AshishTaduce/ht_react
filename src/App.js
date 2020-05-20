@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import DaysList from "./DaysList";
-import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {createPage} from "./designSections";
 
 export default class App extends React.Component{
     render() {
         return (
-            <HashRouter hashType={"slash"}>
+            <BrowserRouter>
                 <Switch>
                     <Route path={'/'} component ={MainPage} exact={true}/>
                     {/*<Route path={process.env.PUBLIC_URL + '/samples'} component ={SamplePage} exact={true}/>*/}
                     <Route path={'/:dayNumber'} component ={MainPage} exact={true}/>
                 </Switch>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }
@@ -52,8 +52,9 @@ function MainPage(props) {
             </head>
             <div className={'main-body'}>
                 <div className={'header'}>
-                    <h1 className="main-title">McLaren Times</h1>
                     <img src={require("./app-icon.png")} alt="" className={'title-icon'}/>
+
+                    <h1 className="main-title">The McLaren Times</h1>
                 </div>
                 <DaysList strings={daysName}/>
 

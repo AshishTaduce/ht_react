@@ -39,12 +39,11 @@ export function createPage(newsList){
             let popularNews = newsList.splice(newsList.findIndex(popularStory), 1)[0];
             let col1 = generateStoryBlock(newsList);
             let col2 = generateStoryBlock(newsList);
-            let section1 = (<div>
+            let section1 = (
                 <Section1 popularNews={popularNews}
                           column1={col1}
                           column2={col2}
-                />
-            </div>)
+                />)
             // newsList = newsUsed2;
             result.push(section1);
         }
@@ -53,7 +52,7 @@ export function createPage(newsList){
     function createSection3() {
         if(newsList.length > 1 && newsList.find(section3News)){
             let sec3 = [newsList.splice(newsList.findIndex(section3News), 1)[0], newsList.splice(newsList.findIndex(section3News), 1)[0]];
-            let section3 = (<div><Section3 newsItemList={sec3}/></div>);
+            let section3 = (<Section3 newsItemList={sec3}/>);
             result.push(section3);
         }
     }
@@ -66,9 +65,8 @@ export function createPage(newsList){
                 newsItemList.push(storyBlock);
                 // newsList = newNews;
             }
-            let section2 = (<div>
-                <Section2 storyBlocks={newsItemList}/>
-            </div>);
+            let section2 = (
+                <Section2 storyBlocks={newsItemList}/>);
             result.push(section2);
         }
     }
@@ -76,7 +74,7 @@ export function createPage(newsList){
     function createSection4() {
         while (newsList.length > 1){
             let sec3 = newsList.splice(0, 6);
-            let section3 = (<div><Section4 newsItemList={sec3}/></div>);
+            let section3 = (<Section4 newsItemList={sec3}/>);
             result.push(section3);
         }
     }
