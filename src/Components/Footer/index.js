@@ -1,6 +1,7 @@
 import  './style.css'
 import React from "react";
-import ReactLogo from './comment-24px.svg'
+import CommentIcon from './comment-24px.svg'
+import OptionsIcon from './dots-vertical.svg'
 export default function Footer(props){
     return(
         <div className={'footer'}>
@@ -33,13 +34,14 @@ function getSource(url){
 function Comments(props) {
     return <div className="comments-points">
         <div className="comments">
-            <img src={ReactLogo} alt="" className={'icons'}/>
+            <img src={CommentIcon} alt="" className={'icons'}/>
              <div className={'link'} onClick={() => window.open(props.url)}>{props.comments} Comments</div>
         </div>
         <div className="points">
 
             <div className="point-count">
-                {props.score} points
+                <div style={{'marginRight':2, paddingTop: 4}}>{props.score} points</div>
+                <div className={'more-option'}><img src={OptionsIcon} alt="" /></div>
             </div>
         </div>
     </div>

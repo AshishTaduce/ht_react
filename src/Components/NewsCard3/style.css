@@ -4,14 +4,14 @@
     flex: 1;
     border-left: 1px solid #e5e5e5;
     height: 100%;
-    padding: 0 19px;
-    padding-top: -19px;
+    padding: 0 0 0 19px;
 }
 
 .news-card-3:first-child{
     padding-left: 0;
     border-left: 0;
-    flex: 1.027;
+    flex: 0.995;
+    padding-right: 19px;
 }
 
 .news-card-3:first-child > img.news-image-3{
