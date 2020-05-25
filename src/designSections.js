@@ -6,7 +6,7 @@ import Section3 from "./Section3";
 import Section4 from "./Section4";
 
 let section3News = (newsItem) =>
-    (newsItem.title.match(/\(\d{4}\)/g)) || ((newsItem.htCurrentImage && newsItem.htCurrentSubtitle) || newsItem.htCurrentImage);
+    ((newsItem.htCurrentImage && newsItem.htCurrentSubtitle) || newsItem.htCurrentImage);
 let popularStory = (newsItem) =>
     (isItPopular(newsItem) && (newsItem.htCurrentImage));
 let averageStory = (newsItem) =>
@@ -31,6 +31,11 @@ let smallStory = (newsItem) =>
 let lastBlockHadPopular = true;
 
 export function createPage(newsList){
+    let oldNewsList = [];
+    let isOldNews =(newsItem) =>  newsItem.title.match(/\(\d{4}\)/g);
+    while(newsList.find((newsItem) => isOldNews(newsItem))){
+        oldNewsList.push(newsList.splice(newsList.findIndex(isOldNews), 1)[0])
+    }
 
     let result = [];
 
@@ -50,8 +55,16 @@ export function createPage(newsList){
     }
 
     function createSection3() {
-        if(newsList.length > 1 && newsList.find(section3News)){
-            let sec3 = [newsList.splice(newsList.findIndex(section3News), 1)[0], newsList.splice(newsList.findIndex(section3News), 1)[0]];
+        if(newsList.length > 1 || oldNewsList.length > 1 ||(newsList.length > 0 && oldNewsList.length > 0) ){
+            let sec3;
+            if(oldNewsList.length) {
+                sec3 = [oldNewsList.splice(newsList.findIndex(section3News), 1)[0]];
+                if(oldNewsList.length !== 0) sec3.push(oldNewsList.splice(newsList.findIndex(section3News), 1)[0]);
+                else sec3.push(newsList.splice(newsList.findIndex(section3News), 1)[0]);
+            }
+            else {
+                sec3 = [newsList.splice(newsList.findIndex(section3News), 1)[0], newsList.splice(newsList.findIndex(section3News), 1)[0]];
+            }
             let section3 = (<Section3 newsItemList={sec3}/>);
             result.push(section3);
         }
@@ -72,22 +85,25 @@ export function createPage(newsList){
     }
 
     function createSection4() {
+        if(oldNewsList.length > 0) newsList = oldNewsList.concat(newsList);
         while (newsList.length > 1){
-            let sec3 = newsList.splice(0, 5);
+            let sec3 = newsList.splice(0, 4);
             let section3 = (<Section4 newsItemList={sec3}/>);
             result.push(section3);
         }
+
     }
 
-    while (newsList.length > 11){
+    while (newsList.length > 1){
         createSection1();
         createSection2();
         createSection3();
         createSection2();
         console.log('News Left is:', newsList.length, result.length);
-        if(newsList.find(section3News) === undefined) break;
+        if(newsList.find(section3News) === undefined && oldNewsList.length <= 1) break;
     }
     createSection4();
+    console.log('stories left are: ',newsList.length, oldNewsList.length);
     return result;
 }
 
