@@ -17,7 +17,7 @@ function NewsCard3(props) {
         }
 
         <div className={'sec-3-news'}>
-            <NewsTitle title={props.title} isPopular={false}/>
+            <NewsTitle title={props.title} url={props.url} isPopular={false}/>
             <div className={'news-3'}>
                 <NewsSubtitle3 data={props.htCurrentSubtitle}/>
             </div>

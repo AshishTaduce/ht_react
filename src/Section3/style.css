@@ -1,11 +1,9 @@
 .section-3 {
-    /*margin-top: 12px;*/
+    margin: 12px 0;
     padding: 12px 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-right: auto;
-    margin-left: auto;
     border-bottom: #e5e5e5 1px solid;
 }
 
@@ -20,4 +18,10 @@
     object-fit: cover;
     margin-left: 8px;
     margin-right: 8px;
+}
+
+.news-card-3:nth-child(2) > div.sec-3-news{
+    /*background-color: aqua;*/
+    padding-right: 0;
+
 }

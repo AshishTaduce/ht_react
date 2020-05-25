@@ -83,6 +83,10 @@ a{
   flex-direction: column;
 }
 
+.news-from-20s{
+  background-color: red;
+}
+
 /*.section-1:first-of-type{*/
 /*  background-color: orangered;*/
 /*  padding-top: 19px;*/

@@ -10,7 +10,6 @@
 .news-card-3:first-child{
     padding-left: 0;
     border-left: 0;
-    flex: 0.995;
     padding-right: 19px;
 }
 
@@ -20,12 +19,13 @@
 }
 
 img.news-image-3{
+    margin-left: 0;
     border: 0;
 }
 
-.news-card-3:first-child{
-    margin-right: 4px;
-}
+/*.news-card-3:first-child{*/
+/*    margin-right: 4px;*/
+/*}*/
 
 .sec-3-news{
     flex: 1;
@@ -33,6 +33,7 @@ img.news-image-3{
     flex-direction:  column;
     word-wrap: break-word;
     margin-top: -8px;
+    padding: 0 8px;
 }
 
 .news-3{

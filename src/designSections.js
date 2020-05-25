@@ -73,7 +73,7 @@ export function createPage(newsList){
 
     function createSection4() {
         while (newsList.length > 1){
-            let sec3 = newsList.splice(0, 6);
+            let sec3 = newsList.splice(0, 5);
             let section3 = (<Section4 newsItemList={sec3}/>);
             result.push(section3);
         }
@@ -82,7 +82,6 @@ export function createPage(newsList){
     while (newsList.length > 11){
         createSection1();
         createSection2();
-        createSection3();
         createSection3();
         createSection2();
         console.log('News Left is:', newsList.length, result.length);

@@ -25,7 +25,8 @@ function MainPage(props) {
     let [newsCards, setNews] = useState(undefined);
     async function getNews() {
         setNews(undefined);
-        let newsUrl = `https://hacker-times.s3-us-west-1.amazonaws.com/${props.location.state === undefined ? 1 : props.location.state.dayNumber}dayStories`;
+        console.log('getting news for day', props?.location?.state?.dayNumber);
+            let newsUrl = props.location.state === undefined ? `https://hacker-times.s3-us-west-1.amazonaws.com/topStories_prod` :  `https://hacker-times.s3-us-west-1.amazonaws.com/${props.location.state.dayNumber}dayStories_prod`;
         let response =  await fetch(newsUrl);
         let newsList = await response.json();
         let data =  newsList.top;
@@ -49,6 +50,7 @@ function MainPage(props) {
                       rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
                       rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
             </head>
             <div className={'main-body'}>
                 <div className={'header'}>

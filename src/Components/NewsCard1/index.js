@@ -7,7 +7,7 @@ import Footer from "../Footer";
 function NewsCard1(props) {
     let url = props.news.url;
     return props.isPopular
-        ? <div className="popular-newscard">
+        ? <div className={props.news.title.search(/\(20..\)/g) ? 'popular-newscard news-from=20s' : 'popular-newscard'}>
             {props.news.htCurrentImage !== undefined ? <div className="popular-image-div">
                 <img onClick={() => window.open(url)}
                     src={props.news.htCurrentImage}
@@ -25,7 +25,7 @@ function NewsCard1(props) {
             </div>
             <Footer url={`https://news.ycombinator.com/item?id=${props.news.id}`} props = {props.news}/>
         </div>
-        : <div className={"news-card-1"}>
+        : <div className={"news-card-1 "+ props.news.title.search(/\(20..\)/g ? 'news-from=20s' : '')}>
         <NewsTitle url = {url} title={props.news.title} isPopular={false}/>
         <div className={'news-1'}>
             <NewsSubtitle1 url = {url} data={processSubtitle(props.news.htCurrentSubtitle)} imageUrl = {props.news.htCurrentImage}/>
