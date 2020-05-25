@@ -6,7 +6,7 @@ import Section3 from "./Section3";
 import Section4 from "./Section4";
 
 let section3News = (newsItem) =>
-    ((newsItem.htCurrentImage && newsItem.htCurrentSubtitle) || newsItem.htCurrentImage);
+    (newsItem.title.match(/\(\d{4}\)/g)) || ((newsItem.htCurrentImage && newsItem.htCurrentSubtitle) || newsItem.htCurrentImage);
 let popularStory = (newsItem) =>
     (isItPopular(newsItem) && (newsItem.htCurrentImage));
 let averageStory = (newsItem) =>

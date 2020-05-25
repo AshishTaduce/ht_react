@@ -7,7 +7,7 @@ import Footer from "../Footer";
 function NewsCard1(props) {
     let url = props.news.url;
     return props.isPopular
-        ? <div className={props.news.title.search(/\(20..\)/g) ? 'popular-newscard news-from=20s' : 'popular-newscard'}>
+        ? <div className={'popular-newscard' + props.news.title.search(/\(20..\)/g) ? ' news-from=20s' : ''}>
             {props.news.htCurrentImage !== undefined ? <div className="popular-image-div">
                 <img onClick={() => window.open(url)}
                     src={props.news.htCurrentImage}
