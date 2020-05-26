@@ -5,6 +5,7 @@ import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
 
+let isOldNews =(newsItem) =>  newsItem.title.match(/\(\d{4}\)/g);
 let section3News = (newsItem) =>
     ((newsItem.htCurrentImage && newsItem.htCurrentSubtitle) || newsItem.htCurrentImage);
 let popularStory = (newsItem) =>
@@ -32,7 +33,6 @@ let lastBlockHadPopular = true;
 
 export function createPage(newsList){
     let oldNewsList = [];
-    let isOldNews =(newsItem) =>  newsItem.title.match(/\(\d{4}\)/g);
     while(newsList.find((newsItem) => isOldNews(newsItem))){
         oldNewsList.push(newsList.splice(newsList.findIndex(isOldNews), 1)[0])
     }
@@ -57,14 +57,15 @@ export function createPage(newsList){
     function createSection3() {
         if(newsList.length > 1 || oldNewsList.length > 1 ||(newsList.length > 0 && oldNewsList.length > 0) ){
             let sec3;
-            if(oldNewsList.length) {
-                sec3 = [oldNewsList.splice(newsList.findIndex(section3News), 1)[0]];
-                if(oldNewsList.length !== 0) sec3.push(oldNewsList.splice(newsList.findIndex(section3News), 1)[0]);
+            if(oldNewsList.length > 0) {
+                sec3 = [oldNewsList.splice(0, 1)[0]];
+                if(oldNewsList.length !== 0) sec3.push(oldNewsList.splice(0, 1)[0]);
                 else sec3.push(newsList.splice(newsList.findIndex(section3News), 1)[0]);
             }
             else {
                 sec3 = [newsList.splice(newsList.findIndex(section3News), 1)[0], newsList.splice(newsList.findIndex(section3News), 1)[0]];
             }
+            console.log(sec3, 'Are the news for sec3', oldNewsList);
             let section3 = (<Section3 newsItemList={sec3}/>);
             result.push(section3);
         }

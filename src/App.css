@@ -83,11 +83,15 @@ a{
   flex-direction: column;
 }
 
-.news-from-20s{
-  background-color: red;
+.old-stories-block{
+  background-color: rgba(85,170,209,0.15);
 }
 
 /*.section-1:first-of-type{*/
 /*  background-color: orangered;*/
 /*  padding-top: 19px;*/
 /*}*/
+
+.footer{
+  font-family: 'Roboto', sans-serif;
+}
